@@ -129,7 +129,7 @@ def update_accounts(account_id):
 
 
 @app.route("/accounts/<int:account_id>", methods=["DELETE"])
-def delete_accounts(account_id):   
+def delete_accounts(account_id):
     """
         Delete an Account
         This endpoint will delete an Account based on the account_id that is requested
@@ -138,7 +138,7 @@ def delete_accounts(account_id):
 
     account = Account.find(account_id)
     if account:
-       account.delete()
+        account.delete()
 
     return "", status.HTTP_204_NO_CONTENT
 
